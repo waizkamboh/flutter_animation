@@ -19,7 +19,7 @@ class _LiquidSwipeAnimationState extends State<LiquidSwipeAnimation> {
       height: double.infinity,
       child: CachedNetworkImage(
         imageUrl:
-        'https://plus.unsplash.com/premium_photo-1675200124904-dfadce24119f?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=80',
         fit: BoxFit.cover,
         placeholder: (context, url) =>
         const Center(child: CircularProgressIndicator()),
@@ -31,7 +31,20 @@ class _LiquidSwipeAnimationState extends State<LiquidSwipeAnimation> {
       height: double.infinity,
       child: CachedNetworkImage(
         imageUrl:
-        'https://plus.unsplash.com/premium_photo-1668485968521-4e182e8093d8?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1516117172878-fd2c41f4a759?w=1200&q=80',
+        fit: BoxFit.cover,
+        placeholder: (context, url) =>
+        const Center(child: CircularProgressIndicator()),
+        errorWidget: (context, url, error) =>
+        const Center(child: Icon(Icons.error)),
+      ),
+    ),
+
+    SizedBox(
+      height: double.infinity,
+      child: CachedNetworkImage(
+        imageUrl:
+        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80',
         fit: BoxFit.cover,
         placeholder: (context, url) =>
         const Center(child: CircularProgressIndicator()),
@@ -43,31 +56,7 @@ class _LiquidSwipeAnimationState extends State<LiquidSwipeAnimation> {
       height: double.infinity,
       child: CachedNetworkImage(
         imageUrl:
-        'https://images.unsplash.com/photo-1578979879663-4ba6a968a50a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        fit: BoxFit.cover,
-        placeholder: (context, url) =>
-        const Center(child: CircularProgressIndicator()),
-        errorWidget: (context, url, error) =>
-        const Center(child: Icon(Icons.error)),
-      ),
-    ),
-    SizedBox(
-      height: double.infinity,
-      child: CachedNetworkImage(
-        imageUrl:
-        'https://images.unsplash.com/photo-1521567097888-2c5fc40a8660?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTl8R0UzbVRqanpQRWd8fGVufDB8fHx8fA%3D%3D',
-        fit: BoxFit.cover,
-        placeholder: (context, url) =>
-        const Center(child: CircularProgressIndicator()),
-        errorWidget: (context, url, error) =>
-        const Center(child: Icon(Icons.error)),
-      ),
-    ),
-    SizedBox(
-      height: double.infinity,
-      child: CachedNetworkImage(
-        imageUrl:
-        'https://images.unsplash.com/photo-1524626050212-92f72d69a67b?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80',
         fit: BoxFit.cover,
         placeholder: (context, url) =>
         const Center(child: CircularProgressIndicator()),
@@ -76,6 +65,7 @@ class _LiquidSwipeAnimationState extends State<LiquidSwipeAnimation> {
       ),
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
