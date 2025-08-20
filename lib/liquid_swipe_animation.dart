@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class LiquidSwipeAnimation extends StatefulWidget {
   const LiquidSwipeAnimation({super.key});
@@ -12,6 +13,7 @@ class _LiquidSwipeAnimationState extends State<LiquidSwipeAnimation> {
 
   final controller = LiquidController();
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +22,11 @@ class _LiquidSwipeAnimationState extends State<LiquidSwipeAnimation> {
           LiquidSwipe(
             liquidController: controller,
             enableSideReveal: true,
+            onPageChangeCallback: (index){
+             setState(() {
+
+             });
+            },
             slideIconWidget: Icon(Icons.arrow_back_ios,color: Colors.white,),
               pages: [
                  Container(
@@ -48,6 +55,18 @@ class _LiquidSwipeAnimationState extends State<LiquidSwipeAnimation> {
                         controller.jumpToPage(page: 2);
                       },
                       child: Text("SKIP")
+                  ),
+                  AnimatedSmoothIndicator(
+                      activeIndex: controller.currentPage,
+                      count: 3,
+                      effect: SwapEffect(
+                        spacing: 16,
+                        dotColor: Colors.white54,
+                        activeDotColor: Colors.white,
+                      ),
+                    onDotClicked: (index){
+                         controller.animateToPage(page: index);
+                    },
                   ),
                   TextButton(
                       onPressed: (){
