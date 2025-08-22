@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/liquid_swipe_animation.dart';
 
+import 'List Scroll/scroll_list.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: LiquidSwipeAnimation(),
+      home: ScrollListAnimatedScreen(),
     );
   }
 }
